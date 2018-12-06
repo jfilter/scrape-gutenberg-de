@@ -9,7 +9,7 @@ class GutenbergDESpider(scrapy.Spider):
     name = "books"
 
     def start_requests(self):
-        MAX_NO_RESULT = 100
+        MAX_NO_RESULT = 1000
         no_result = 0
 
         i = getattr(self, 'start_id', 0)
@@ -23,8 +23,10 @@ class GutenbergDESpider(scrapy.Spider):
                 no_result += 1
             else:
                 no_result = 0
+                print(r.url)
                 yield Request(r.url, self.parse)
             i += 1
+        print('finished')
 
     def parse(self, response):
         # http://gutenberg.spiegel.de/buch/uber-die-grundfrage-des-pessimismus-in-methodischer-hinsicht-12/1
