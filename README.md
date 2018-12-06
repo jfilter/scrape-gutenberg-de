@@ -1,6 +1,6 @@
 # Scrape Gutenberg DE
 
-Scrape all Books from [Projekt Gutenberg-DE](http://gutenberg.spiegel.de/). Usefull, i.e., if you need a large corpus of German text to some serious language modeling.
+Scrape all Books from [Projekt Gutenberg-DE](http://gutenberg.spiegel.de/). Usefull, i.e., if you need a large corpus of German text to do some serious language modeling.
 
 ## Usage
 
